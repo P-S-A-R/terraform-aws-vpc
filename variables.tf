@@ -23,4 +23,15 @@ variable "igw_tags" {
    default = {}
 }
 
+variable "public_subnet_cidrs" {
+   type = list
+   validation {
+    condition     = length(var.public_subnet_cidrs)  == 2
+    error_message = "please provide 2 public subnet cidr"
+  }
+  
+}
 
+variable "public_subnet_tags" {
+  default = {}
+}
