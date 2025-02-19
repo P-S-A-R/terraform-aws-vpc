@@ -19,4 +19,8 @@ variable "common_tags" {
    default = {}
 }
 
+variable "igw_tags" {
+   default = {}
+}
+
 
